@@ -1,0 +1,153 @@
+2025-03-28 20:09:47,404 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-03-28 20:09:47,404 - [33mPress CTRL+C to quit[0m
+2025-03-28 20:09:47,404 -  * Restarting with stat
+2025-03-28 20:09:47,510 -  * Debugger is active!
+2025-03-28 20:09:47,511 -  * Debugger PIN: 955-689-389
+2025-03-28 20:09:51,083 - Неавторизованный доступ от IP: 192.168.1.9
+2025-03-28 20:09:53,030 - Результаты сканирования для IP 192.168.1.9:
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-03-28 20:09 MSK
+Nmap scan report for 192.168.1.9
+Host is up (0.00066s latency).
+All 1000 scanned ports on 192.168.1.9 are closed
+MAC Address: 00:0C:29:F8:1A:97 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.66 ms 192.168.1.9
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.91 seconds
+
+2025-03-28 20:09:56,042 - 192.168.1.9 - - [28/Mar/2025 20:09:56] "[35m[1mPOST /authorize HTTP/1.1[0m" 500 -
+2025-03-28 20:09:56,085 - 192.168.1.9 - - [28/Mar/2025 20:09:56] "GET /authorize?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-28 20:09:56,085 - 192.168.1.9 - - [28/Mar/2025 20:09:56] "GET /authorize?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-28 20:09:56,100 - 192.168.1.9 - - [28/Mar/2025 20:09:56] "GET /authorize?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-28 20:09:32,854 - Неавторизованный доступ от IP: 192.168.1.9
+2025-03-28 20:09:34,812 - Результаты сканирования для IP 192.168.1.9:
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-03-28 20:09 MSK
+Nmap scan report for 192.168.1.9
+Host is up (0.00029s latency).
+All 1000 scanned ports on 192.168.1.9 are closed
+MAC Address: 00:0C:29:F8:1A:97 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.29 ms 192.168.1.9
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.93 seconds
+
+2025-03-28 20:09:37,818 - 192.168.1.9 - - [28/Mar/2025 20:09:37] "[35m[1mPOST /authorize HTTP/1.1[0m" 500 -
+2025-03-28 20:09:37,842 - 192.168.1.9 - - [28/Mar/2025 20:09:37] "[36mGET /authorize?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-28 20:09:37,843 - 192.168.1.9 - - [28/Mar/2025 20:09:37] "[36mGET /authorize?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-28 20:15:32,229 -  * Detected change in '/home/user/Desktop/New Folder/honeypot1.py', reloading
+2025-03-28 20:15:32,275 -  * Restarting with stat
+2025-03-28 20:16:18,694 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.8:5000
+2025-03-28 20:16:18,694 - [33mPress CTRL+C to quit[0m
+2025-03-28 20:16:18,695 -  * Restarting with stat
+2025-03-28 20:16:19,315 -  * Debugger is active!
+2025-03-28 20:16:19,316 -  * Debugger PIN: 955-689-389
+2025-03-28 20:18:32,905 - Неавторизованный доступ от IP: 192.168.1.9
+2025-03-28 20:18:34,964 - Результаты сканирования для IP 192.168.1.9:
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-03-28 20:18 MSK
+Nmap scan report for 192.168.1.9
+Host is up (0.00030s latency).
+All 1000 scanned ports on 192.168.1.9 are closed
+MAC Address: 00:0C:29:F8:1A:97 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.31 ms 192.168.1.9
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 2.03 seconds
+
+2025-03-28 20:18:37,997 - 192.168.1.9 - - [28/Mar/2025 20:18:37] "[31m[1mPOST /authorize HTTP/1.1[0m" 403 -
+2025-03-28 20:18:39,960 - Неавторизованный доступ от IP: 192.168.1.9
+2025-03-28 20:18:41,848 - Результаты сканирования для IP 192.168.1.9:
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-03-28 20:18 MSK
+Nmap scan report for 192.168.1.9
+Host is up (0.00030s latency).
+All 1000 scanned ports on 192.168.1.9 are closed
+MAC Address: 00:0C:29:F8:1A:97 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.30 ms 192.168.1.9
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.87 seconds
+
+2025-03-28 20:18:44,872 - 192.168.1.9 - - [28/Mar/2025 20:18:44] "[31m[1mPOST /authorize HTTP/1.1[0m" 403 -
+2025-03-28 20:18:46,868 - Неавторизованный доступ от IP: 192.168.1.9
+2025-03-28 20:18:48,720 - Результаты сканирования для IP 192.168.1.9:
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-03-28 20:18 MSK
+Nmap scan report for 192.168.1.9
+Host is up (0.00037s latency).
+All 1000 scanned ports on 192.168.1.9 are closed
+MAC Address: 00:0C:29:F8:1A:97 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.37 ms 192.168.1.9
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.83 seconds
+
+2025-03-28 20:18:51,743 - 192.168.1.9 - - [28/Mar/2025 20:18:51] "[31m[1mPOST /authorize HTTP/1.1[0m" 403 -
+2025-03-28 20:20:06,038 - Неавторизованный доступ от IP: 192.168.1.2
+2025-03-28 20:20:16,062 - Результаты сканирования для IP 192.168.1.2:
+Сканирование завершилось по тайм-ауту
+2025-03-28 20:20:16,068 - 192.168.1.2 - - [28/Mar/2025 20:20:16] "GET / HTTP/1.1" 200 -
+2025-03-28 20:20:16,178 - Неавторизованный доступ от IP: 192.168.1.2
+2025-03-28 20:20:18,573 - Неавторизованный доступ от IP: 192.168.1.2
+2025-03-28 20:20:26,247 - Результаты сканирования для IP 192.168.1.2:
+Сканирование завершилось по тайм-ауту
+2025-03-28 20:20:26,248 - 192.168.1.2 - - [28/Mar/2025 20:20:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 20:20:28,595 - Результаты сканирования для IP 192.168.1.2:
+Сканирование завершилось по тайм-ауту
+2025-03-28 20:20:31,631 - 192.168.1.2 - - [28/Mar/2025 20:20:31] "[31m[1mPOST /authorize HTTP/1.1[0m" 403 -
+2025-03-28 20:20:31,698 - Неавторизованный доступ от IP: 192.168.1.2
+2025-03-28 20:20:41,717 - Результаты сканирования для IP 192.168.1.2:
+Сканирование завершилось по тайм-ауту
+2025-03-28 20:20:41,718 - 192.168.1.2 - - [28/Mar/2025 20:20:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-28 20:21:38,090 - Неавторизованный доступ от IP: 192.168.1.2
+2025-03-28 20:21:48,110 - Результаты сканирования для IP 192.168.1.2:
+Сканирование завершилось по тайм-ауту
+2025-03-28 20:21:48,111 - 192.168.1.2 - - [28/Mar/2025 20:21:48] "GET / HTTP/1.1" 200 -
+2025-04-03 13:38:09,570 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+2025-04-03 13:38:09,582 - [33mPress CTRL+C to quit[0m
+2025-04-03 13:38:09,599 -  * Restarting with stat
+2025-04-03 13:38:10,594 -  * Debugger is active!
+2025-04-03 13:38:10,731 -  * Debugger PIN: 104-172-381
+2025-04-03 13:40:06,438 - 192.168.200.200 - - [03/Apr/2025 13:40:06] "GET / HTTP/1.1" 200 -
+2025-04-03 13:40:06,486 - 192.168.200.200 - - [03/Apr/2025 13:40:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-03 13:40:38,055 - 192.168.200.200 - - [03/Apr/2025 13:40:38] "[32mGET /admin HTTP/1.1[0m" 302 -
+2025-04-03 13:40:38,062 - 192.168.200.200 - - [03/Apr/2025 13:40:38] "GET /admin/login HTTP/1.1" 200 -
+2025-04-03 13:43:12,130 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:5000
+2025-04-03 13:43:12,130 - [33mPress CTRL+C to quit[0m
+2025-04-03 13:43:12,130 -  * Restarting with stat
+2025-04-03 13:43:12,758 -  * Debugger is active!
+2025-04-03 13:43:12,759 -  * Debugger PIN: 104-172-381

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Логи о попытках доступа</title>
+    <style>
+        /* Общие стили для страницы */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Контейнер для логов */
+        .logs-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Заголовок */
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Надпись Created by */
+        .created-by {
+            font-size: 0.9rem;
+            color: #888888;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Стили для списка логов */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li {
+            background-color: #f9f9f9;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #444444;
+        }
+
+        /* Ссылка "Назад в админскую панель" */
+        a {
+            color: #0077ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        a:hover {
+            color: #005bb5;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="logs-container">
+        <p class="created-by">Created by 33 кафедра</p> <!-- Добавленная надпись -->
+        <h2>Логи о попытках доступа</h2>
+        <ul>
+            {% for log in logs %}
+                <li>{{ log }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('admin_panel') }}">Назад в админскую панель</a>
+    </div>
+</body>
+</html>
+

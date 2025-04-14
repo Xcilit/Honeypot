@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Админская панель</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .panel-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        .created-by {
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #f9f9f9;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="range"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #0077ff;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+
+        .range-value {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .log-box {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-family: monospace;
+            margin-top: 1rem;
+        }
+
+        .summary-table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+        }
+
+        .summary-table th, .summary-table td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .summary-table th {
+            background-color: #f0f0f0;
+        }
+
+        a {
+            color: #0077ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        a:hover {
+            color: #005bb5;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="panel-container">
+    <p class="created-by">Created by 33 кафедра</p>
+    <h2>Админская панель</h2>
+
+    <h3>Белый список IP-адресов:</h3>
+    <ul>
+        {% for ip in allowed_ips %}
+            <li>{{ ip }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('add_ip') }}" method="post">
+        <label for="new_ip">Добавить IP:</label>
+        <input type="text" id="new_ip" name="new_ip" required>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <h3>Пользователи:</h3>
+    <ul>
+        {% for user in users %}
+            <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('add_user') }}" method="post">
+        <label for="new_user">Добавить пользователя:</label>
+        <input type="text" id="new_user" name="new_user" required>
+        <label for="new_password">Пароль:</label>
+        <input type="password" id="new_password" name="new_password" required>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <h3>Сводка по типам атак:</h3>
+    <table class="summary-table">
+        <thead>
+        <tr>
+            <th>Тип угрозы</th>
+            <th>Количество</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for threat, count in summary.items() %}
+            <tr>
+                <td>{{ threat }}</td>
+                <td>{{ count }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>Очистка логов:</h3>
+    <form action="{{ url_for('clear_logs') }}" method="post">
+        <button type="submit">Очистить логи</button>
+    </form>
+
+    <h3>Настройка уровня ограничения доступа:</h3>
+    <form action="{{ url_for('set_restriction') }}" method="post">
+        <label for="restriction_level">Уровень (0–5):</label>
+        <input type="range" id="restriction_level" name="restriction_level" min="0" max="5" value="{{ current_restriction }}" oninput="document.getElementById('rangeValue').textContent = this.value;">
+        <div class="range-value">Текущий уровень: <span id="rangeValue">{{ current_restriction }}</span></div>
+        <button type="submit">Применить уровень</button>
+        {% if confirmation_message %}
+            <p style="color: green; font-weight: bold;">{{ confirmation_message }}</p>
+        {% endif %}
+    </form>
+
+    <h3>Логи вторжений:</h3>
+    <div class="log-box">
+        {% for log in logs %}
+            {{ log }}
+        {% endfor %}
+    </div>
+
+    <a href="{{ url_for('admin_logout') }}">Выйти</a>
+</div>
+</body>
+</html>
